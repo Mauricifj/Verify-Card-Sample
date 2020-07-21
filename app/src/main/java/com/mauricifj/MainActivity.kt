@@ -50,6 +50,8 @@ class MainActivity : AppCompatActivity() {
                         android.R.layout.simple_list_item_1,
                         it.errors
                     )
+                    errors_list_view.visibility = View.VISIBLE
+                    backToForm.visibility = View.VISIBLE
                 } else {
                     errors_list_view.visibility = View.GONE
                 }
@@ -70,6 +72,7 @@ class MainActivity : AppCompatActivity() {
                         result_bin_data_last_four.text = binData.lastFourDigits
 
                         result_content.visibility = View.VISIBLE
+                        backToForm.visibility = View.VISIBLE
                     }
                 } else {
                     result_content.visibility = View.GONE
@@ -87,6 +90,8 @@ class MainActivity : AppCompatActivity() {
             card_security_code.text?.clear()
             card_brand.text.clear()
             result_content.visibility = View.INVISIBLE
+            errors_list_view.visibility = View.INVISIBLE
+            backToForm.visibility = View.INVISIBLE
             form.visibility = View.VISIBLE
         }
     }

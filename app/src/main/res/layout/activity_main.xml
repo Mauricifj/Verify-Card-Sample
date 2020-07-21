@@ -111,7 +111,7 @@
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/label_card_expiration_date"
-                android:layout_marginLeft="@dimen/margin_big"
+                android:layout_marginStart="@dimen/margin_big"
                 android:hint="@string/hint_card_expiration_month"
                 app:counterMaxLength="2"
                 app:endIconMode="dropdown_menu"
@@ -123,7 +123,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    tools:ignore="LabelFor" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/label_card_expiration_date"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="@dimen/margin_big"
+                android:layout_marginEnd="@dimen/margin_big"
                 android:hint="@string/hint_card_expiration_year"
                 app:counterMaxLength="4"
                 app:endIconMode="dropdown_menu"
@@ -146,7 +147,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    tools:ignore="LabelFor" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
@@ -195,7 +197,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"
-                android:maxLines="1" />
+                android:maxLines="1"
+                tools:ignore="LabelFor" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -471,18 +474,20 @@
 
         </LinearLayout>
 
-        <ListView
-            android:id="@+id/errors_list_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_normal" />
-
-        <Button
-            android:id="@+id/backToForm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_back_button" />
-
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/errors_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <Button
+        android:id="@+id/backToForm"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_back_button"
+        android:visibility="invisible"/>
 
 </RelativeLayout>
